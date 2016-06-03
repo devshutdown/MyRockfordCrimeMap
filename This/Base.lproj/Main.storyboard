@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyRockfordCrimeMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-Pf-wm4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="My Rockford Crime Map" id="88B-9i-cjf"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-pO-4FL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="469"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="5lJ-fI-lE2"/>
+                                </constraints>
+                            </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="X3W-FG-Lz2">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <connections>
+                                    <action selector="DateSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="SCz-Xv-Zk7"/>
+                                    <action selector="DateSliderUP:" destination="BYZ-38-t0r" eventType="valueChanged" id="r8w-DU-w1v"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Hours From Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-CQ-KDJ">
+                                <rect key="frame" x="20" y="534" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X3W-FG-Lz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="008-c8-j0a"/>
+                            <constraint firstItem="Q4p-Pf-wm4" firstAttribute="leading" secondItem="W8F-pO-4FL" secondAttribute="leading" id="042-zA-2ph"/>
+                            <constraint firstAttribute="bottom" secondItem="X3W-FG-Lz2" secondAttribute="bottom" constant="20" symbolic="YES" id="13Y-dh-eku"/>
+                            <constraint firstItem="X3W-FG-Lz2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3kP-w3-GOy"/>
+                            <constraint firstItem="X3W-FG-Lz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4CH-YY-VsM"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="trailing" secondItem="X3W-FG-Lz2" secondAttribute="trailing" id="8fb-J9-uNw"/>
+                            <constraint firstItem="Q4p-Pf-wm4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JNZ-kb-aX0"/>
+                            <constraint firstItem="X3W-FG-Lz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jk5-CD-F5b"/>
+                            <constraint firstItem="W8F-pO-4FL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0V-Kj-wcq"/>
+                            <constraint firstItem="Q4p-Pf-wm4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="N4E-Jf-tld"/>
+                            <constraint firstAttribute="trailing" secondItem="W8F-pO-4FL" secondAttribute="trailing" id="OIa-hR-N4i"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="leading" secondItem="X3W-FG-Lz2" secondAttribute="leading" id="Vfe-Q9-235"/>
+                            <constraint firstItem="Q4p-Pf-wm4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a1K-Ob-97v"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="top" secondItem="W8F-pO-4FL" secondAttribute="bottom" constant="1" id="dgC-o3-6dD"/>
+                            <constraint firstItem="W8F-pO-4FL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hAf-ew-w79"/>
+                            <constraint firstItem="W8F-pO-4FL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hTm-9Q-x4s"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hml-DP-wvk"/>
+                            <constraint firstItem="Q4p-Pf-wm4" firstAttribute="trailing" secondItem="W8F-pO-4FL" secondAttribute="trailing" id="jeC-6z-Bzh"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lya-X4-mcs"/>
+                            <constraint firstItem="W8F-pO-4FL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="mY6-7R-bVK"/>
+                            <constraint firstItem="L9N-CQ-KDJ" firstAttribute="centerX" secondItem="W8F-pO-4FL" secondAttribute="centerX" id="mof-10-3ep"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JNZ-kb-aX0"/>
+                                <exclude reference="a1K-Ob-97v"/>
+                                <exclude reference="N0V-Kj-wcq"/>
+                                <exclude reference="hAf-ew-w79"/>
+                                <exclude reference="hml-DP-wvk"/>
+                                <exclude reference="lya-X4-mcs"/>
+                                <exclude reference="008-c8-j0a"/>
+                                <exclude reference="4CH-YY-VsM"/>
+                                <exclude reference="Jk5-CD-F5b"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lblCrimeRange" destination="L9N-CQ-KDJ" id="7pV-id-uHd"/>
+                        <outlet property="mapView" destination="W8F-pO-4FL" id="iau-B6-AAV"/>
+                        <outlet property="navigtionBar" destination="Q4p-Pf-wm4" id="bF8-gI-36p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="357"/>
+        </scene>
+    </scenes>
+</document>
